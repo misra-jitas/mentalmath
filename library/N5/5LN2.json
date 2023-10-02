@@ -13,10 +13,10 @@
         "Comment s'appelle la partie d'un nombre relatif après le signe ?"
     ],
         "answer":[
-            "C’est un nombre que l’on situe par rapport à zéro. Il peut être négatif ou positif.",
-            "C’est le signe du nombre négatif.",
-            "Ce sont des nombres relatifs dont la somme vaut zéro.",
-            "C'est la distance à zéro. Elle indique de combien est éloigné le nombre par rapport à zéro."
+            "C’est un <b>nombre que l’on situe par rapport à zéro</b>. Il peut être négatif ou positif.",
+            "C’est le <b>signe</b> du nombre négatif.",
+            "Ce sont des nombres relatifs dont <b>la somme vaut zéro</b>.",
+            "C'est la <b>distance à zéro</b>. Elle indique de combien est éloigné le nombre par rapport à zéro."
     ]
     },{
         "name":"Repérage",
@@ -29,12 +29,12 @@
             "Quelle propriété géométrique ont deux points du plan dont les abscisses et les ordonnées sont opposées ?"
         ],
         "answer":[
-            "Ce sont les coordonnées. Le premier nombre est l’abscisse, le second est l’ordonnée.",
-            "On les notes entre parenthèses, séparées d’un point virgule. Exemple : A(3 ;-5)",
-            "Des points d’abscisses opposées sur une droite graduée sont symétriques par rapport à l’origine.",
-            "Des points du plan d'abscisses opposées sont symétriques par rapport à l'axe des ordonnées.",
-            "Le nombre qui permet de répérer un point sur un axe gradué est appelé abscisse du point.",
-            "Des points d'abscisses et ordonnées opposées sont symétriques par rapport à l'origine du repère."
+            "Ce sont les <b>coordonnées</b>. Le premier nombre est l’<b>abscisse</b>, le second est l’<b>ordonnée</b>.",
+            "On les notes <b>entre parenthèses, séparées d’un point virgule</b>. Exemple : A(3 ;-5)",
+            "Des points d’abscisses opposées sur une droite graduée sont <b>symétriques par rapport à l’origine</b>.",
+            "Des points du plan d'abscisses opposées sont <b>symétriques par rapport à l'axe des ordonnées</b>.",
+            "Le nombre qui permet de répérer un point sur un axe gradué est appelé <b>abscisse du point</b>.",
+            "Des points d'abscisses et ordonnées opposées sont <b>symétriques par rapport à l'origine du repère</b>."
         ]
     },{
         "name":"Somme, différence",
@@ -48,8 +48,8 @@
             "Enlève les parenthèses de l'écriture $$(${math.signedNumber(:a[0])})+(${math.signedNumber(:a[1])})-(${math.signedNumber(:a[2])})-(${math.signedNumber(:a[3])})$$"
         ],
         "answer":[
-            "On garde le signe et on ajoute les distances à zéro.",
-            "On prend le signe du nombre le plus éloigné de zéro et on soustrait les distances à zéro.",
+            "On <b>garde le signe</b> et on <b>ajoute</b> les distances à zéro.",
+            "On prend le <b>signe du nombre le plus éloigné de zéro</b> et on <b>soustrait</b> les distances à zéro.",
             "Soustraire un relatif revient à ajouter son opposé.",
             "C’est une opération composée d’addition et de soustractions de nombres relatifs.",
             "$$(${:a[0]})-(${:a[1]})=\\color{red}{${:a[0]}+(${math.signedNumber(-:a[1])})}$$",

@@ -26,11 +26,11 @@
             "Comment s'appelle la figure plane qui permet de réaliser un solide ?"
     ],
         "answer":[
-            "Un solide est une figure de l'espace délimitée par des faces ou des surfaces",
-            "Un pavé droit est un solide délimité par 6 faces rectangulaires.<br>Il comporte 8 sommets et 12 arêtes.<br>On l'appelle aussi le parallélépipède rectangle.",
-            "Un prisme droit est un solide délimité par 2 bases polygonales parallèles et identiques et des faces lattérales rectangulaires.",
-            "Un cylindre est une solide délimité par deux disques identiques de même axe et une surface.",
-            "C'est un patron."
+            "Un solide est une <b>figure de l'espace</b> délimitée par des faces ou des surfaces",
+            "Un pavé droit est un solide délimité par <b>6 faces rectangulaires</b>.<br>Il comporte 8 sommets et 12 arêtes.<br>On l'appelle aussi le parallélépipède rectangle.",
+            "Un prisme droit est un solide délimité par <b>2 bases polygonales parallèles et identiques</b> et des faces lattérales <b>rectangulaires</b>.",
+            "Un cylindre est une solide délimité par <b>deux disques identiques</b> de même axe et une surface.",
+            "C'est un <b>patron</b>."
     ]
     },{
         "name":"Reconnaitre",
@@ -42,10 +42,10 @@
             "Quel est ce solide ?<br>${:cones[0]}"
         ],
         "answer":[
-            "Ce solide est un prisme droit",
-            "Ce solide est un pavé droit",
-            "Ce solide est une pyramide",
-            "Ce solide est un cône de révolution"
+            "Ce solide est un <b>prisme droit</b>.",
+            "Ce solide est un <b>pavé droit</b>.",
+            "Ce solide est une <b>pyramide</b>",
+            "Ce solide est un <b>cône de révolution</b>"
         ]
     },{
         "name":"Formules de Volumes",
