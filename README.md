@@ -75,8 +75,6 @@ Ces fichiers json comportent des *données obligatoires* :
  * **title** : titre de l'activité
  * **ID** : un identifiant unique de l'activité pour la retrouver facilement dans la base de données, correspond au nom du fichier json : ID.json (pas de doublon !), ex : 6ND6 rangé dans N6 (niveau 6e) sous le code 6ND (Cf structure.json pour le classement) 6ND6 pour le numéro dans l'ordre de création des fichiers
  * **dest** : la liste des niveaux et sous partie qui seront peuplés par l'activité, ex 7NA1 sera rangé en CM2 (**7**e) > **N**umérique > Comprendre et utiliser les nombres (**A**) > 1ère activité
- * **speech** : optionnel - indique si l'exercice peut être lu par la synthèse vocale text to speech
- * **repeat** : true ou non défini - permet de répéter des questions "pauvres" en type de question/réponses de se répéter.
  * **vars** : objet json contenant la ou les variables utilisées dans l'activité
    * une variable est une chaine ou un tableau. elle est interprétée pour tirer au sort des nombres uniques, des tableaux de nombres ...
      * des entiers min_max ou min_max_quantité ou min_max_^liste de valeurs à éviter ou min_max_quantité_^&,val1,val2... & signifie pas de double
@@ -85,7 +83,7 @@ Ces fichiers json comportent des *données obligatoires* :
    * une variable a pourra être reprise dans une autre variable par un appel de type ${:a} pour utiliser la variable a. Attention, les déclarations sont chronologiques : a ne peut être appelée avant sa déclaration.
    * des calculs utilisant la bibliothèque math peuvent être effectués dans les paires d'accolades, exemple : ${math.multiply(:a,:b)}
    * d'autres traitements peuvent être effectués à l'aide de fonctions javascript ${:a.toUpperCase()}
-* **consts** : objet contenant des données constantes, telles que des tableaux
+   * Note : les variables présentes dans l'activité et redéfinies dans une option sont définies dans l'ordre de déclaration globale. Il faut bien l'avoir en tête.
 * **question** : chaine unique ou tableau de chaines contenant le texte de la question
   * pour le cas du tableau, il est possible de choisir le type de question à afficher lors du paramétrage de l'activité
 * **answer** : chaine unique  ou tableau de chaines contenant la réponse à la question
@@ -99,9 +97,12 @@ ainsi que des *données optionnelles* :
     * une variable de même nom remplace la valeur de l'objet parent
   * **type** : valeurs possible : "texte", "latex" qui indique le type de rendu des questions/réponses
   * **repeat** : Possibilité de répéter une question (le moteur évite normalement les répétitions de questions, mais parfois, c'est impossible car l'énoncé est visuel et les questions sont toujours les mêmes) valeurs possibles : true (on évite que la question se répète dans les 5 dernières questions) ou un nombre x (on évite que la réponse se répète plus de 2 fois dans les x dernières questions)
+  valeur par défaut : false (si non défini)
   * **textSize** : taille du texte de la question, permet de modifier la taille d'affichage par défaut. valeurs possibles : "medium" ou "small" 
+ * **speech** : indique si l'exercice peut être lu par la synthèse vocale text to speech
 
 * Pour l'activité ou une option :
+  * **consts** : objet contenant des données constantes, telles que des tableaux, ces données peuvent contenir des variables. Définies pour l'activité, elles sont accessibles dans les options.
   * **value** : chaine ou tableau de chaines contenant les réponses attendues dans le formulaire de réponse en ligne
   * **figure** : chaine contenant une figure illustrant l'activité. On peut par exemple faire référence à une figure d'une table contenant des svg, svg contenant des variables. héhéhé !
   * **shortq** : question au format court (pas la consigne par exemple) pour un export plus lisible dans les ceintures, doit suivre la forme de "questions" : une chaine ou un tableau. si l'on prévoit un emplacement de réponse dans la question, il n'y a pas d'espace de réponse derrière. Pour l'emplacement de la réponse, on utilisera \\colorbox{codecouleur}{\\quad} (un quad laisse de la place pour environ 2 chiffres pas trop grands)
@@ -122,9 +123,15 @@ ainsi que des *données optionnelles* :
  * ">"
  * "="
  * "^" exposant
+ * "10n" puissance de 10
  * "h"
  * "min"
  * les caractères a, b, c, e, t, :, u, v, x, y, z, A, L
+ * "aigu", "obtus", "droit"
+ * "o", "n" oui/non
+ * "V", "F" VRAI/FAUX
+ * les unités A, L, l, m, g et %
+
 ---
 ### à faire à l'insertion d'un nouvel exercice
 à l'aide de Node.js (à installer) lancer library/scan.js pour recréer le fichier qui référence tous les exercices dans une arborescence chargée au lancement de MathsMentales. Pour cela, dans Le terminal de VSC, taper cd library puis node scan
