@@ -6,7 +6,7 @@ Démo : https://seb-cogez.github.io/mathsmentales/
  * L'auteur principal est Sébastien COGEZ. Des collègues ont suggéré des activités qu'il a développées.
  * Guillaume Valmont a écrit et corrigé quelques activités et a proposé une possibilité d'échange entre MathsMentales et des sites qui l'intégreraient par iframe.
  * Sandrine Cartier-lange a créé quelques activités autour de Pythagore et pour le lycée
- * Eric Elter a eu une relecture très attentive de plusieurs activités.
+ * Éric Elter a eu une relecture très attentive de plusieurs activités et en a proposé de nouvelles.
  * Fayçal TIB a voulu créer quelques activités pour le lycée (inachevées)
  * Mikael Le Mentec a modifié ou créé quelques activités en collège et lycée
  
