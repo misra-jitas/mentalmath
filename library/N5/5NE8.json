@@ -22,7 +22,7 @@
             "phrase1":"${:op1>0?:phrases[:signes[:op1]][0]::phrases['moins'][0][:tdiv]} ${:n1}.",
             "phrase2":"${:op2>0?:phrases[:signes[:op2]][1][0]::phrases['moins'][1][:tdiv][0]}${:n2}${:op2>0?:phrases[:signes[:op2]][1][1]::phrases['moins'][1][:tdiv][1]}."
         },
-        "question": "Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li></ul>",
+        "question": "Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li></ul>",
         "answer":"$$\\color{red}{x${:operations[:op1]}${:n1}${:operations[:op2]}${:n2}}=${math.calc('x'+:opes[:op1]+:n1+:opes[:op2]+:n2)}$$",
         "value":"x${:operations[:op1]}${:n1}${:operations[:op2]}${:n2}"
     },{
@@ -31,7 +31,7 @@
             "phrase1":"${:op1>0?:phrases[:signes[:op1]][0]::phrases['moins'][0][:tdiv]} ${:n1}.",
             "phrase2":"${:phrases[:signes[:op2]][1][0]}${:n2}."
         },
-        "question": "Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li></ul>",
+        "question": "Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li></ul>",
         "answer":"$$\\color{red}{(x${:operations[:op1]}${:n1})${:operations[:op2]}${:n2}}$$",
         "value":"(x${:operations[:op1]}${:n1})${:operations[:op2]}${:n2}"
     },{
@@ -41,7 +41,7 @@
             "phrase2":"${:phrases[:signes[:op2]][1][0]}${:n2}.",
             "phrase3":"${:op3>0?:phrases[:signes[:op3]][1][0]::phrases['moins'][1][:tdiv][0]}${:n3<11?:n3:'le nombre choisi'}${:op3>0?:phrases[:signes[:op3]][1][1]::phrases['moins'][1][:tdiv][1]}."
         },
-        "question": "Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li></ul>",
+        "question": "Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li></ul>",
         "answer":"$$\\color{red}{(x${:operations[:op1]}${:n1})${:operations[:op2]}${:n2}${:operations[:op3]} ${:n3<11?:n3:'x'}}$$",
         "value":"(x${:operations[:op1]}${:n1})${:operations[:op2]}${:n2}${:operations[:op3]} ${:n3<11?:n3:'x'}"
     },{
@@ -50,7 +50,7 @@
         "phrase1":"${:op1>0?:phrases[:signes[:op1]][0]::phrases['moins'][0][:tdiv]} ${:n1}.",
         "phrase2":"${:op2>0?:phrases[:signes[:op2]][0]::phrases['moins'][0][:tdiv]} ${:n2}.",
         "phrase3":"Multiplier les deux résultats précédents."},
-        "question": "Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li></ul>",
+        "question": "Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li></ul>",
         "answer":"$$\\color{red}{(x${:operations[:op1]}${:n1})\\times(x${:operations[:op2]}${:n2})}$$",
         "value":"(x${:operations[:op1]}${:n1})\\times(x${:operations[:op2]}${:n2})"
     },{
@@ -62,7 +62,7 @@
         "phrase4":"${:op2>0?'Ajouter'::vs} ${:n2} au résultat précédent.",
         "phrase5":"Multiplier les résultats des étapes 3 et 5."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li><li>${:phrase5}</li></ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li><li>${:phrase5}</li></ul>",
         "answer":"$$\\color{red}{(${:c1}x${:operations[:op1]}${:n1})\\times(${:c2}x${:operations[:op2]}${:n2})}$$",
         "value":"(${:c1}x${:operations[:op1]}${:n1})\\times(${:c2}x${:operations[:op2]}${:n2})"
     },{
@@ -74,7 +74,7 @@
         "phrase4":"${:op2>0?'Ajouter'::vs} ${:n2} au résultat précédent, noter $$B$$ ce résultat.",
         "phrase5":"Calculer $$A \\times B$$."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li><li>${:phrase5}</li></ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li><li>${:phrase5}</li></ul>",
         "answer":"$$\\color{red}{(${:c1}x${:operations[:op1]}${:n1})\\times(${:c2}x${:operations[:op2]}${:n2})}$$",
         "value":"(${:c1}x${:operations[:op1]}${:n1})\\times(${:c2}x${:operations[:op2]}${:n2})"
     },{
@@ -88,7 +88,7 @@
         "phrase2":"${:op1?'Ajouter'::vs} ${:choix?'son '+:multiples[:m1]:'son carré'}.",
         "phrase3":"${:op2?'Ajouter'::vs} ${:n2} au résultat."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li>${:choix2?'<li>'+:phrase3+'</li>':''}</ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li><li>${:phrase1}</li><li>${:phrase2}</li>${:choix2?'<li>'+:phrase3+'</li>':''}</ul>",
         "answer":"$$\\color{red}{${:choix?'x^2'::n1+'x'}${:operations[:op1]}${:choix?(:m1+2)+'x':'x^2'}${:choix2?:operations[:op2]+:n2:''}}$$",
         "value":"${:choix?'x^2'::n1+'x'}${:operations[:op1]}${:choix?(:m1+1)+'x':'x^2'}${:choix2?:operations[:op2]+:n2:''}"
     },{
@@ -101,7 +101,7 @@
             "phrase3":"Mettre le résultat au carré",
             "phrase4":"Soustraire le carré du nombre choisi."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li></ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li><li>${:phrase4}</li></ul>",
         "answer":"$$\\color{red}{(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-x^2}$$",
         "value":"(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-x^2"
     },{
@@ -117,7 +117,7 @@
             "phrase6":"Mettre le résultat au carré.",
             "phrase7":"Soustraire ce résultat au premier carré."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li>${:m2>1?'<li>'+:phrase4+'</li>':''}<li>${:phrase5}</li><li>${:phrase6}</li><li>${:phrase7}</li></ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li>${:m2>1?'<li>'+:phrase4+'</li>':''}<li>${:phrase5}</li><li>${:phrase6}</li><li>${:phrase7}</li></ul>",
         "answer":"$$\\color{red}{(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-(${:m2>1?:m2:''}x${:op2>0?'+':'-'}${:n2})^2}$$",
         "value":"(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-(${:m2>1?:m2:''}x${:op2>0?'+':'-'}${:n2})^2"
     },{
@@ -133,7 +133,7 @@
             "phrase6":"Mettre le résultat au carré, noter $$B$$ le résultat.",
             "phrase7":"Calculer $$A-B$$."
         },
-        "question":"Quelle expression traduit ce programme :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li>${:m2>1?'<li>'+:phrase4+'</li>':''}<li>${:phrase5}</li><li>${:phrase6}</li><li>${:phrase7}</li></ul>",
+        "question":"Traduire ce programme par une expression :<br><ul><li>Choisir un nombre.</li>${:m1>1?'<li>'+:phrase1+'</li>':''}<li>${:phrase2}</li><li>${:phrase3}</li>${:m2>1?'<li>'+:phrase4+'</li>':''}<li>${:phrase5}</li><li>${:phrase6}</li><li>${:phrase7}</li></ul>",
         "answer":"$$\\color{red}{(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-(${:m2>1?:m2:''}x${:op2>0?'+':'-'}${:n2})^2}$$",
         "value":"(${:m1>1?:m1:''}x${:op1>0?'+':'-'}${:n1})^2-(${:m2>1?:m2:''}x${:op2>0?'+':'-'}${:n2})^2"
     }
