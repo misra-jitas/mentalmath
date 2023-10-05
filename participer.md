@@ -10,16 +10,18 @@ Si vous avez besoin d'une fonction particulière pour créer un exercice, vous p
 - Installer [Visual Studio Code](https://code.visualstudio.com/Download) de Microsoft ou [VSCodium](https://vscodium.com/), la version libre, mais parfois plus compliquée pour la suite.
 - Installer [NodeJS](https://nodejs.org/fr/)
 - Installer [Git](https://git-scm.com/)
-- Installer [GitHub Desktop](https://desktop.github.com/)
+- Installer [GitHub Desktop](https://desktop.github.com/) (encore utile ?)
+- Installer l'extention *GitLab Workflow* dans VSC
 
+### TODO : à mettre à jour suite au passage à GitLab
 ### Paramétrage de Visual Studio Code (VSC)
 
 - Ouvrir VSC.
 - Ne pas installer de suite le module en français
-- Cliquer sur "Source Control" (panneau de gauche) > "Clone Repository" > "Clone from GitHub"
-![Cloner depuis GitHub](https://user-images.githubusercontent.com/85620848/155867784-8db0596a-88be-4ee7-9b03-d484ebee41cb.png)
-- Se connecter sur GItHub et autoriser VSC à accéder à son compte
-- Rechercher "mathsmentales" dans la barre du haut et cliquer sur "seb-cogez/mathsmentales"
+- Cliquer sur "Source Control" (panneau de gauche) > "Clone Repository" > "Clone from GitLab"
+![Cloner depuis GitLab](https://user-images.githubusercontent.com/85620848/155867784-8db0596a-88be-4ee7-9b03-d484ebee41cb.png)
+- Se connecter sur GItLab et autoriser VSC à accéder à son compte
+- Rechercher "mathsmentales" dans la barre du haut et cliquer sur "scogez/mathsmentales"
 ![clonage de MathsMentales](https://blog.mathsmentales.net/wp-content/uploads/2022/10/cu251Jz3Wm.png)
 - Sélectionner le dossier dans lequel sera copié le code source de MathsMentales et attendre que la copie se termine.
 - Une fois le code chargé, cliquer sur la notification en bas à droite pour ouvrir le dossier. ![notification](https://blog.mathsmentales.net/wp-content/uploads/2022/10/BQe6ogm2nX.png)
