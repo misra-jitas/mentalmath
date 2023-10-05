@@ -1,6 +1,6 @@
 ## Mathsmentales
 Projet de réécriture du site MathsMentales.net qui permet de créer des diaporamas de calcul mental sans effort
-Démo : https://seb-cogez.github.io/mathsmentales/
+Démo : https://www.mathsmentales.net/
 
 ### Auteurs
  * L'auteur principal est Sébastien COGEZ. Des collègues ont suggéré des activités qu'il a développées.
@@ -10,7 +10,7 @@ Démo : https://seb-cogez.github.io/mathsmentales/
  * Fayçal TIB a voulu créer quelques activités pour le lycée (inachevées)
  * Mikael Le Mentec a modifié ou créé quelques activités en collège et lycée
  
-Pour ceux qui veulent participer, voir [cette documentation](https://github.com/seb-cogez/mathsmentales/blob/master/participer.md)
+Pour ceux qui veulent participer, voir [cette documentation](https://forge.aeif.fr/scogez/mathsmentales/-/blob/master/participer.md)
 
 ### Nouveautés apportées par cette version :
  * nouvelle interface : tous les réglages dans une page, affichage d'exemples de questions pour mieux comprendre
