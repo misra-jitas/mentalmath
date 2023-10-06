@@ -35,10 +35,10 @@
         "answer":[
             "$$${:x}+${:y}$$ est <span class='red'>la somme de ${:x} et de ${:y}</span>",
             "$$${:x}\\times ${:y}$$ est <span class='red'>le produit de ${:x} par ${:y}</span>",
-            "$$${Math.max(:x,:y)}-${Math.min(:x,:y)}$$ est <span class='red'>la différence entre ${:x} et ${:y}</span>",
+            "$$${Math.max(:x,:y)}-${Math.min(:x,:y)}$$ est <span class='red'>la différence entre ${Math.max(:x,:y)} et ${Math.min(:x,:y)}</span>",
             "$$${:x}\\div ${:y}$$ est <span class='red'>le quotient de ${:x} par ${:y}</span>"
         ],
-        "value":["la somme de ${:x} et de ${:y}","le produit de ${:x} par ${:y}","la différence entre ${:x} et ${:y}","le quotient de ${:x} par ${:y}"]
+        "value":["la somme de ${:x} et de ${:y}","le produit de ${:x} par ${:y}","la différence entre ${Math.max(:x,:y)} et ${Math.min(:x,:y)}","le quotient de ${:x} par ${:y}"]
     },{
         "name":"Additions et soustractions",
         "vars":{"o1":["+","-"],"o2":["+","-"],"x":"1_99","y":"1_99","z":"1_99","o":"0_1"},
