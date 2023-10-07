@@ -4,7 +4,7 @@
     "ID":"4NA4",
     "dest":["4NA","3NA","2N1"],
     "options":[{
-        "name":"Racines de carrés parfaits inférieurs à 200",
+        "name":"Racines de carrés parfaits inférieurs à 400",
         "vars":{"racine":"1_20",
             "carre":"${:racine*:racine}"
         }

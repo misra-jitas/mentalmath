@@ -15,6 +15,9 @@
         },{
             "name":"Carrés de 1 à 15",
             "vars":{"a":"1_15"}
+        },{
+            "name":"Carrés de 11 à 20",
+            "vars":{"a":"11_20"}
         }
     ],
     "question":["${:a}^2","${:a}\\times${:a}"],

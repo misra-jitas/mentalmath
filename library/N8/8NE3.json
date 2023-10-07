@@ -5,7 +5,7 @@
     "speech":1,
     "dest":["8NE", "7NE", "6NE", "5NC", "4NC", "3NB"],
     "keys":["_","_","_","_","_","_","_","_"],
-    "vars":{"a":[1,9,99,999,9999], "b":"1_3", "c":"d0_${:a}_${:b}_^0"},
+    "vars":{"a":[1,9,99,999,9999], "b":"1_3","decs":"","p":"", "c":"d0_${:a}_${:b}_^0"},
     "options":[{
         "name":"Diviser un décimal par 10",
         "question": "${:c}\\div 10",
@@ -27,8 +27,8 @@
     },{
         "name":"Diviser un décimal à 3 chiffres par 10",
         "vars":{
-            "max":[9,99,999],
-            "decs":"1_${:max}",
+            "a":[9,99,999],
+            "decs":"1_${:a}",
             "p":"-3_3",
             "c":"${math.round(:decs*Math.pow(10,:p),3)}"
         },
@@ -39,8 +39,8 @@
     },{
         "name":"Diviser un décimal  à 3 chiffres par 100",
         "vars":{
-            "max":[9,99,999],
-            "decs":"1_${:max}",
+            "a":[9,99,999],
+            "decs":"1_${:a}",
             "p":"-3_3",
             "c":"${math.round(:decs*Math.pow(10,:p),3)}"
         },
@@ -51,8 +51,8 @@
     },{
         "name":"Diviser un décimal à 3 chiffres par 1000",
         "vars":{
-            "max":[9,99,999],
-            "decs":"1_${:max}",
+            "a":[9,99,999],
+            "decs":"1_${:a}",
             "p":"-3_3",
             "c":"${math.round(:decs*Math.pow(10,:p),3)}"
         },

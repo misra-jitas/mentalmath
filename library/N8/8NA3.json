@@ -3,12 +3,12 @@
     "ID":"8NA3",
     "speech":1,
     "type":"text",
-    "description":"Somme d'un nombre entier inférieur à la dizaine avec des unités, dizaines, centaines...",
+    "description":"Somme d'un nombre entier avec des unités, dizaines, centaines...",
     "dest":["8NA", "7NA", "6NA"],
     "keys":["_","_","_","_","_","_","_","_"],
     "options":[{
             "name":"Ajouter des unité",
-            "vars":{"a":[99,999,9999],"t1":"1_${:a}", "b":"2_9", "t2":"${:b}", "ajout":"unités"}
+            "vars":{"a":[99,999,9999],"t1":"1_${:a}", "c":[99,999], "b":"10_${:c}", "t2":"${:b}", "ajout":"unités"}
         },{
             "name":"Ajouter des dizaines",
             "vars":{"a":[9,99,999,9999],"t1":"1_${:a}", "b":"2_9", "t2":"${:b*10}", "ajout":"dizaines"}
