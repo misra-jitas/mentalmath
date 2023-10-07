@@ -4,16 +4,55 @@ Si vous avez besoin d'une fonction particulière pour créer un exercice, vous p
 
 ## Installation
 
-### Forge
+### Forge et logiciels nécessaires
 
-- Créer un compte sur github.com puis le communiquer à Sébastien COGEZ pour lui signaler votre participation.
+- Créer un compte sur forge.aeif.fr puis le communiquer à Sébastien COGEZ pour lui signaler votre participation.
 - Installer [Visual Studio Code](https://code.visualstudio.com/Download) de Microsoft ou [VSCodium](https://vscodium.com/), la version libre, mais parfois plus compliquée pour la suite.
 - Installer [NodeJS](https://nodejs.org/fr/)
 - Installer [Git](https://git-scm.com/)
 - Installer [GitHub Desktop](https://desktop.github.com/) (encore utile ?)
 - Installer l'extention *GitLab Workflow* dans VSC
 
-### TODO : à mettre à jour suite au passage à GitLab
+### Paramétrage de l'authentification
+#### Créer une clé SSH
+
+saisir `ssh-keygen -t ed25519 -C "forge.aeif SSH Pair"` dans un terminal et suivre les étapes.
+
+Remarques :
+
+- La passphrase qu’on demande de paramétrer est facultative et servira de mot de passe à chaque fois que vous voudrez interagir avec le serveur (pour Push, Pull, Merge Request(appelé PR sur GitHub) etc.)
+- Si la passphrase n’est pas vide, VSC ne signale pas automatiquement que de nouvelles mises à jour sont disponibles et lorsqu’on veut push il faut la saisir deux fois : une fois pour récupérer les mises à jour et une autre pour effectivement push, c’est un peu pénible
+
+!(https://forge.aeif.fr/coopmaths/mathalea/-/wikis/img/creation-cle-ssh.png)
+
+- Sur Mac et Linux, saisir `cat ~/.ssh/id_ed25519.pub` pour afficher la clé SSH ainsi créée
+- Sur Windows, aller dans le dossier indiqué et ouvrir le fichier id_ed25519.pub
+- Copier tout le texte depuis `ssh-ed25519` jusqu’à `forge.aeif SSH Pair` qui font aussi partie de la clé SSH
+
+#### La saisir sur la forge
+
+- Ouvrir https://forge.aeif.fr/-/profile/keys dans un nouvel onglet
+- Coller la clé SSH dans le champ "Key" / "Clé"
+- Paramétrer une date d’expiration ou son absence (la procédure sera à renouveler à l’expiration).
+- Cliquer sur "Add Key" / "Ajouter clé"
+
+#### Générer un Personal Access Token
+
+- Aller sur https://forge.aeif.fr/-/profile/personal_access_tokens
+- Nom du jeton : Choisir le nom que vous voulez, par exemple VSC Access Token
+- Paramétrer une date d’expiration ou son absence (la procédure sera à renouveler à l’expiration).
+- Sélectionner les portées : Tout cocher
+- Cliquer sur "Create personal access token" / "Créer jeton d'accès personnel"
+- Laisser la page ouverte, on en aura besoin pour le copier dans un instant (image qui montre comment le copier)
+
+#### Le saisir sur VSC (Visual Studio Code)
+
+- Installer l’extension GitLab Workflow extension dans VSC
+- Control + Shift + P (ou Command + Shift + P) pour ouvrir la palette de commandes
+- Chercher la commande GitLab: Add Account to vs code
+- Saisir ou coller https://forge.aeif.fr/
+- Copier-coller le Personal Access Token précédemment créé
+
 ### Paramétrage de Visual Studio Code (VSC)
 
 - Ouvrir VSC.
