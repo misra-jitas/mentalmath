@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
     align-content: stretch;
     gap: 1em;
-    height: calc(100vh - 5em);
+    height: calc(100vh - 5rem);
     width: 98%;
     margin: auto;
 }
@@ -40,8 +40,8 @@ h1 {
 .tuile {
     font-size: 1.5em;
     flex-grow: 1;
-    min-width: 12em;
-    min-height: 5em;
+    min-width: 30rem;
+    min-height: 5rem;
     position: relative;
     perspective: 1000px;
 }
@@ -74,7 +74,7 @@ h1 {
     right: 0;
     bottom: 0;
     padding: 0.5rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     z-index: 5;
 }
@@ -116,4 +116,17 @@ h1 {
     top:0;
     border: 0.6rem solid red;
     transform: rotateY(180deg);
+  }
+
+  #zoom button {
+    background: transparent;
+    height: 3em;
+    padding: 0;
+    margin: 0.4rem;
+  }
+  #zoom {
+    position: absolute;
+  }
+  #zoom button img {
+    height: 100%;
   }

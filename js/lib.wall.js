@@ -10,6 +10,7 @@ const MM={};
 const content = document.getElementById("creator-content");
 const pageOrientations = ["portrait","paysage"]
 const parameters = {};
+let fontSize = "1";
 
 document.getElementById('flipall').onclick = ()=>{
     let rotate = true;
@@ -26,10 +27,24 @@ document.getElementById('flipall').onclick = ()=>{
             el.classList.remove('rotate')
     })
 }
-
 function refresh(){
     makePage()
     common.mathRender(['question','answer'])
+}
+
+function fontSizePlus(){
+    fontSize = fontSize * 1.25
+    content.style['font-size'] = fontSize+'em'
+}
+function fontSizeMinus(){
+    fontSize = fontSize * 0.8
+    content.style['font-size'] = fontSize+'em'
+}
+document.getElementById('zoomin').onclick = () => {
+    fontSizePlus()
+}
+document.getElementById('zoomout').onclick = () => {
+    fontSizeMinus()
 }
 
 function getRandomPastelColor(){
